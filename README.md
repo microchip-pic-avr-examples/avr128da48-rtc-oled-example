@@ -32,12 +32,7 @@ RTC:
   - RTC Clock
   - Input clock 32 kHz / 32
   - Overflow interrupt enabled
-  - Period 0x3c4
-
-TCB0:
-  - Input clock main clock (16MHz) / 2 (from prescaler)
-  - Period: 0x1d4c
-  - Overflow interrupt enabled
+  - Period 0x3ff
 
 SPI0:
   - SPI Master Polled mode
@@ -71,9 +66,9 @@ CPUINT:
 
 ## Operation
 
-1. Open the *avr128da48_RTC_OLED_example.atsln* solution in Atmel Studio
+1. Open the *avr128da48-cnano-rtc-oled-bare.atsln* solution in Atmel Studio
 
-2. Build the solution: right click on *avr128da48_RTC_OLED_example* solution and select Build
+2. Build the solution: right click on *avr128da48-cnano-rtc-oled-bare* solution and select Build
 <br><img src="images/AVR-DA_RTC_OLED_build.png" width="500">
 
 3. Select the AVR128DA48 Curiosity Nano on-board debugger in the *Tool* section of the project settings:
@@ -82,7 +77,7 @@ CPUINT:
 <br><img src="images/AVR-DA_RTC_OLED_tool_settings.png" width="500">
 
 
-4. Program the project to the board: select *avr128da48_RTC_OLED_example* project and click *Start Without Debugging*:
+4. Program the project to the board: select *avr128da48-cnano-rtc-oled-bare* project and click *Start Without Debugging*:
 <br><img src="images/AVR-DA_RTC_OLED_program.png" width="500">
 
 Demo:
