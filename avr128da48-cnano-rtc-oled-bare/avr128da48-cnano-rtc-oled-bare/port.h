@@ -32,7 +32,9 @@
 extern "C" {
 #endif
 
-#include <compiler.h>
+//#include "compiler.h"
+#include <avr/io.h>
+#include <avr/builtins.h>
 
 enum port_pull_mode {
 	PORT_PULL_OFF,

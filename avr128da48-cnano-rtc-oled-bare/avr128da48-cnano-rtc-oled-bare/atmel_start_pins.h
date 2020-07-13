@@ -8,7 +8,7 @@
 #ifndef ATMEL_START_PINS_H_INCLUDED
 #define ATMEL_START_PINS_H_INCLUDED
 
-#include <port.h>
+#include "port.h"
 
 /**
  * \brief Set PA4 pull mode

@@ -25,9 +25,9 @@
  */
 
 #include "OLEDC_Click.h"
-#include <driver_init.h>
-#include <atmel_start_pins.h>
-#include <clock_config.h>
+//#include "driver_init.h"
+#include "atmel_start_pins.h"
+#include "spi_basic.h"
 #include <util/delay.h>
 
 #define MAX_ADDRESS_BOUND 95
@@ -207,4 +207,70 @@ void oledC_setup(void)
 	oledC_setColumnAddressBounds(0, MAX_ADDRESS_BOUND);
 	oledC_setRowAddressBounds(0, MAX_ADDRESS_BOUND);
 	oledC_setDisplayOrientation();
+}
+
+void oledC_init()
+{
+
+    /* PORT setting on PA7 */
+
+    // Set pin direction to output
+    CS_PIN_set_dir(PORT_DIR_OUT);
+
+    CS_PIN_set_level(
+    // <y> Initial level
+    // <id> pad_initial_level
+    // <false"> Low
+    // <true"> High
+    false);
+
+    /* PORT setting on PD0 */
+
+    // Set pin direction to output
+    DC_PIN_set_dir(PORT_DIR_OUT);
+
+    DC_PIN_set_level(
+    // <y> Initial level
+    // <id> pad_initial_level
+    // <false"> Low
+    // <true"> High
+    false);
+
+    /* PORT setting on PD3 */
+
+    // Set pin direction to output
+    RW_PIN_set_dir(PORT_DIR_OUT);
+
+    RW_PIN_set_level(
+    // <y> Initial level
+    // <id> pad_initial_level
+    // <false"> Low
+    // <true"> High
+    false);
+
+    /* PORT setting on PD6 */
+
+    // Set pin direction to output
+    EN_PIN_set_dir(PORT_DIR_OUT);
+
+    EN_PIN_set_level(
+    // <y> Initial level
+    // <id> pad_initial_level
+    // <false"> Low
+    // <true"> High
+    false);
+
+    /* PORT setting on PD7 */
+
+    // Set pin direction to output
+    RST_PIN_set_dir(PORT_DIR_OUT);
+
+    RST_PIN_set_level(
+    // <y> Initial level
+    // <id> pad_initial_level
+    // <false"> Low
+    // <true"> High
+    false);
+
+    SPI_MASTER_initialization();
 }

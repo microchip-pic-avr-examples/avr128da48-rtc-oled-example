@@ -28,7 +28,7 @@
 #ifndef SPI_BASIC_H_INCLUDED
 #define SPI_BASIC_H_INCLUDED
 
-#include <compiler.h>
+//#include "compiler.h"
 #include <stdbool.h>
 
 #ifdef __cplusplus
@@ -87,6 +87,8 @@ void SPI_MASTER_exchange_block(void *block, uint8_t size);
 void SPI_MASTER_write_block(void *block, uint8_t size);
 
 void SPI_MASTER_read_block(void *block, uint8_t size);
+
+void SPI_MASTER_initialization(void);
 
 #ifdef __cplusplus
 }

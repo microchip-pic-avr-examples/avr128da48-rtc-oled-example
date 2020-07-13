@@ -83,4 +83,6 @@ void oledC_sendColor(uint8_t r, uint8_t g, uint8_t b);
 void oledC_sendColorInt(uint16_t raw);
 void oledC_startWritingDisplay(void);
 void oledC_stopWritingDisplay(void);
+
+void oledC_init(void);
 #endif /* OLEDC_CLICK_H */

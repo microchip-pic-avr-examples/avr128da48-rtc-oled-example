@@ -21,13 +21,24 @@
     SOFTWARE.
 */
 
-#define F_CPU                           24000000UL
+
+
+#include <avr/io.h>
+#include <avr/builtins.h>
+#include <avr/interrupt.h>
+
+#define  F_CPU                           24000000UL
+
 #include <util/delay.h>
-#include <atmel_start.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stddef.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include "OLEDC_Click.h"
 #include "OLED_functions.h"
 #include "CLOCK_functions.h"
+#include "port.h"
 
 #define BUTTON_PRESSED                  false
 #define BUTTON_LONG_PRESS_THRESHOLD     1000
@@ -52,7 +63,7 @@ button_t button_state = BT_NOCHANGE;
 int main(void)
 {
     OSCSetup();
-    atmel_start_init();
+    oledC_init();
     buttonInit();
     RTCInit();
     sei();

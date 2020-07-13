@@ -41,7 +41,7 @@
 					<Attribute>template</Attribute>
 					<Category>source</Category>
 					<Condition>C Exe</Condition>
-					<FileContentHash>qobgDWPVyH6ZDAZ5lmOE/A==</FileContentHash>
+					<FileContentHash>HSoZMFrq428i8qDQTsxe0A==</FileContentHash>
 					<FileVersion></FileVersion>
 					<Name>templates/main.c</Name>
 					<SelectString>Main file (.c)</SelectString>

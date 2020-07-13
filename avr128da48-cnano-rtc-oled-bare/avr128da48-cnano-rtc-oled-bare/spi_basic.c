@@ -34,8 +34,15 @@
  *
  *@{
  */
-#include <spi_basic.h>
-#include <atmel_start_pins.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <avr/io.h>
+#include <avr/builtins.h>
+#include "spi_basic.h"
+#include "atmel_start_pins.h"
+
 
 typedef struct {
 	// hardware stuff that controls SPI mode
@@ -234,4 +241,40 @@ void SPI_MASTER_read_block(void *block, uint8_t size)
 		*b = SPI0.DATA;
 		b++;
 	}
+}
+
+void SPI_MASTER_initialization(void)
+{
+
+    // Set pin direction to input
+    PA5_set_dir(PORT_DIR_IN);
+
+    PA5_set_pull_mode(
+    // <y> Pull configuration
+    // <id> pad_pull_config
+    // <PORT_PULL_OFF"> Off
+    // <PORT_PULL_UP"> Pull-up
+    PORT_PULL_OFF);
+
+    // Set pin direction to output
+    PA4_set_dir(PORT_DIR_OUT);
+
+    PA4_set_level(
+    // <y> Initial level
+    // <id> pad_initial_level
+    // <false"> Low
+    // <true"> High
+    false);
+
+    // Set pin direction to output
+    PA6_set_dir(PORT_DIR_OUT);
+
+    PA6_set_level(
+    // <y> Initial level
+    // <id> pad_initial_level
+    // <false"> Low
+    // <true"> High
+    false);
+
+    SPI_MASTER_init();
 }
