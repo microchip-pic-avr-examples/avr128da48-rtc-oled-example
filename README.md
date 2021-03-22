@@ -14,8 +14,7 @@ More details and code examples on the AVR128DA48 can be found at the following l
 - [AVR128DA48 Project Examples in START](https://start.atmel.com/#examples/AVR128DA48CuriosityNano)
 
 ## Software Used
-- Microchip Studio 7.0.2397 or newer [(microchip.com/mplab/avr-support/atmel-studio-7)](https://www.microchip.com/mplab/avr-support/atmel-studio-7)
-- AVR-Dx 1.0.18 or newer Device Pack
+- Microchip Studio 7.0.2397 or newer [(Microchip Studio for AVR® and SAM Devices)](https://www.microchip.com/en-us/development-tools-tools-and-software/microchip-studio-for-avr-and-sam-devices)- AVR-Dx 1.0.18 or newer Device Pack
 
 ## Hardware Used
 - AVR128DA48 Curiosity Nano [(DM164151)](https://www.microchip.com/Developmenttools/ProductDetails/DM164151)
