@@ -1,6 +1,6 @@
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# AVR128DA48 RTC with OLED Click Code Example
+# Desk Clock using RTC and an OLED Click
 
 This repository provides an Atmel Studio solution with a bare metal code example for an RTC implementation.
 This example implements a desktop clock built using the AVR-DA's RTC and an OLED Click.
