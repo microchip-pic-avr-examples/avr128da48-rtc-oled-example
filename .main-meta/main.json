@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.studio.project.avr128da48-rtc-oled-example",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "displayName": "Desk Clock using RTC and an OLED Click",
         "projectName": "avr128da48-rtc-oled-example",
         "shortDescription": "This repository contains a Microchip Studio source code example for how to use the Real-Time Counter (RTC) to control an OLED click",
